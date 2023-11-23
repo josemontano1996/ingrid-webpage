@@ -11,12 +11,12 @@ export default function Home() {
     <>
       <div className=" bg-bgAlt py-8">
         <MaxWidthWrapper>
-          <section className="grid grid-cols-2 items-center gap-6">
-            <div>
-              <h2 className="text-center text-4xl font-semibold lg:text-5xl">
+          <section className="grid grid-cols-1 px-[3vw] md:px-0 md:grid-cols-2 items-center gap-6">
+            <div className='w-[80vw] mx-auto md:w-full'>
+              <h2 className="text-center text-4xl sm:text-5xl font-semibold lg:text-6xl">
                 A healthy meal delivered to your door, every single day
               </h2>
-              <h6 className="mb-6 mt-8 text-xl lg:text-2xl">
+              <h6 className="mb-6 text-center md:text-left mt-8 text-xl lg:text-2xl">
                 The smart 365-days-year food subscription that will make you eat
                 healthy again. Tailored to your personal tastes and nutritional
                 needs.
