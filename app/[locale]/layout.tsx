@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={cn('relative h-full', cormorant.className)}>
-        <NavBar locale={locale} />
+        <NavBar />
         <main className="relative flex min-h-screen flex-col">
           <div className="flex-1 flex-grow">{children}</div>
         </main>
