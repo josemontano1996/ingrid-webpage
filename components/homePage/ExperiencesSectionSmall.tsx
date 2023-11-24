@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import Link from 'next/link';
 
 import Image from 'next/image';
 import { buttonVariants } from '../ui/button';
 import { cn } from '@/lib/utils';
+import LocaleLink from '../LocaleLink';
 
 export const ExperiencesSectionSmall: FC = () => {
   return (
@@ -30,9 +30,9 @@ export const ExperiencesSectionSmall: FC = () => {
         </p>
 
         <div>
-          <Link href="/menu" className={cn(buttonVariants(), 'sm:text-lg')}>
+          <LocaleLink path="/menu" styling={cn(buttonVariants(), 'sm:text-lg')}>
             Check the Menu
-          </Link>
+          </LocaleLink>
         </div>
 
         <h3 className="mb-8 mt-12 text-2xl sm:text-3xl">
@@ -54,9 +54,12 @@ export const ExperiencesSectionSmall: FC = () => {
         </p>
 
         <div>
-          <Link href="/services" className={cn(buttonVariants(), 'sm:text-lg')}>
+          <LocaleLink
+            path="/services"
+            styling={cn(buttonVariants(), 'sm:text-lg')}
+          >
             Book an Event
-          </Link>
+          </LocaleLink>
         </div>
 
         <h3 className="mb-8 mt-12 text-2xl sm:text-3xl">
@@ -78,9 +81,12 @@ export const ExperiencesSectionSmall: FC = () => {
         </p>
 
         <div>
-          <Link href="/services" className={cn(buttonVariants(), 'sm:text-lg')}>
+          <LocaleLink
+            path="/services"
+            styling={cn(buttonVariants(), 'sm:text-lg')}
+          >
             Book a Workshop
-          </Link>
+          </LocaleLink>
         </div>
       </div>
     </div>

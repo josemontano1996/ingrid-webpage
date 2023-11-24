@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '../../lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import { SmoothScrollLink } from '@/components/SmoothScrollElement';
 import { ExperiencesSection } from '@/components/homePage/ExperiencesSection';
+import LocaleLink from '@/components/LocaleLink';
 
 export default function Home({ params }: { params: { locale: string } }) {
   const { locale } = params;
@@ -24,15 +24,15 @@ export default function Home({ params }: { params: { locale: string } }) {
               </h6>
 
               <div className="text-center lg:space-x-8">
-                <Link
-                  href={`${locale}/menu`}
-                  className={cn(
+                <LocaleLink
+                  path="/menu"
+                  styling={cn(
                     buttonVariants({ size: 'lg' }),
                     'hidden text-xl lg:inline-flex',
                   )}
                 >
-                  Check our Menu
-                </Link>
+                  Check our menu
+                </LocaleLink>
                 <SmoothScrollLink
                   classes={cn(
                     buttonVariants({ variant: 'outline', size: 'lg' }),

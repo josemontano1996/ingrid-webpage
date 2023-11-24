@@ -1,4 +1,5 @@
 'use client';
+
 import {
   Menubar,
   MenubarMenu,
@@ -19,13 +20,11 @@ import {
   UserCircle2,
   UserCog,
 } from 'lucide-react';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
+import LocaleLink from './LocaleLink';
 
 const HamburgerMenu = () => {
-  const { locale } = useParams();
 
   return (
     <Menubar>
@@ -37,122 +36,122 @@ const HamburgerMenu = () => {
           className={cn('z-40 space-y-2 bg-white px-[2vw] py-4 text-xl')}
         >
           <MenubarItem>
-            <Link
-              href={`/${locale}/delivery`}
-              className="italic hover:underline"
+            <LocaleLink
+              path={`/delivery`}
+              styling="italic hover:underline"
             >
               Delivery
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/delivery`}
-              className="italic hover:underline"
+            <LocaleLink
+              path={`/delivery`}
+              styling="italic hover:underline"
             >
               Private events
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/delivery`}
-              className="italic hover:underline"
+            <LocaleLink
+              path={`/delivery`}
+              styling="italic hover:underline"
             >
               Workshops
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <Separator />
           <MenubarItem>
-            <Link
-              href={`/${locale}/cart`}
-              className="flex space-x-4 text-gray-600 hover:text-gray-800"
+            <LocaleLink
+              path={`/cart`}
+              styling="flex space-x-4 text-gray-600 hover:text-gray-800"
             >
               <UserCircle2 />
               <div>Sign in</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <h3 className="text-2xl">User section</h3>
           <MenubarItem>
-            <Link
-              href={`/${locale}/cart`}
-              className="flex space-x-4 text-gray-600 hover:text-gray-800"
+            <LocaleLink
+              path={`/cart`}
+              styling="flex space-x-4 text-gray-600 hover:text-gray-800"
             >
               <ShoppingCart />
               <div>Cart</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/account`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/account`}
+              styling="flex space-x-4 text-gray-600"
             >
               <User2 />
               <div>Account</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/orders`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/orders`}
+              styling="flex space-x-4 text-gray-600"
             >
               <Inbox />
               <div>Orders</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/cart`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/cart`}
+              styling="flex space-x-4 text-gray-600"
             >
               <LogOut />
               <div>Log out</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarSeparator />
           <h3 className="text-2xl">Admin section</h3>
           <MenubarItem>
-            <Link
-              href={`/${locale}/admin/dashboard`}
-              className="flex space-x-4 text-gray-600 hover:text-gray-800"
+            <LocaleLink
+              path={`/admin/dashboard`}
+              styling="flex space-x-4 text-gray-600 hover:text-gray-800"
             >
               <LayoutDashboard />
               <div>Dashboard</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/admin/products`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/admin/products`}
+              styling="flex space-x-4 text-gray-600"
             >
               <ShoppingBasket />
               <div>Productos</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/admin/orders`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/admin/orders`}
+              styling="flex space-x-4 text-gray-600"
             >
               <Folders />
               <div>Pedidos</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/admin/orders`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/admin/orders`}
+              styling="flex space-x-4 text-gray-600"
             >
               <UserCog />
               <div>Usuarios</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
           <MenubarItem>
-            <Link
-              href={`/${locale}/cart`}
-              className="flex space-x-4 text-gray-600"
+            <LocaleLink
+              path={`/cart`}
+              styling="flex space-x-4 text-gray-600"
             >
               <LogOut />
               <div>Log out</div>
-            </Link>
+            </LocaleLink>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
