@@ -20,7 +20,6 @@ export const Img: FC<Props> = ({
 }) => {
   return (
     <Image
-      className="fadeIn"
       src={url}
       alt={altText}
       height={500}

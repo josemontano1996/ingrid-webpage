@@ -5,18 +5,19 @@ import Link from 'next/link';
 import { cn } from '../../lib/utils';
 import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import { SmoothScrollLink } from '@/components/SmoothScrollElement';
+import { ExperiencesSection } from '@/components/homePage/ExperiencesSection';
 
 export default function Home() {
   return (
     <>
       <div className=" bg-bgAlt py-8">
         <MaxWidthWrapper>
-          <section className="grid grid-cols-1 px-[3vw] md:px-0 md:grid-cols-2 items-center gap-6">
-            <div className='w-[80vw] mx-auto md:w-full'>
-              <h2 className="text-center text-4xl sm:text-5xl font-semibold lg:text-6xl">
+          <section className="grid grid-cols-1 items-center gap-6 px-[3vw] md:grid-cols-2 md:px-0">
+            <div className="mx-auto md:w-full">
+              <h2 className="text-center text-4xl font-semibold sm:text-5xl lg:text-6xl">
                 A healthy meal delivered to your door, every single day
               </h2>
-              <h6 className="mb-6 text-center md:text-left mt-8 text-xl lg:text-2xl">
+              <h6 className="mb-6 mt-8 text-center text-xl md:text-left lg:text-2xl">
                 The smart 365-days-year food subscription that will make you eat
                 healthy again. Tailored to your personal tastes and nutritional
                 needs.
@@ -56,19 +57,23 @@ export default function Home() {
       </div>
 
       <MaxWidthWrapper>
-        <section id="chef">
+        <section id="chef" className="text-center">
           <h2 className="my-16 text-center text-5xl">The Chef</h2>
-          <div className="">
-            <div>
-              <Img
-                url="https://res.cloudinary.com/dfupfbnez/image/upload/v1696760817/pexels-miquel-ferran-gomez-figueroa-3814446_vunxq8.jpg"
-                optimized={false}
-                altText={`Chef d'Arconso image`}
+          <div className="grid grid-cols-1 items-center space-y-4 sm:space-y-0 sm:grid-cols-2 sm:gap-6">
+            <div className="mx-auto">
+              <Image
+                src="https://res.cloudinary.com/dfupfbnez/image/upload/v1696760817/pexels-miquel-ferran-gomez-figueroa-3814446_vunxq8.jpg"
+                width={500}
+                height={500}
+                unoptimized
+                alt="chef photo"
               />
             </div>
-            <div>
-              <h3>Chef d{`'`}Arconso: A culinary journey</h3>
-              <p className="mx-auto my-6">
+            <div className="sm:flex sm:flex-col sm:justify-center md:text-left">
+              <h3 className="text-2xl sm:text-4xl">
+                Chef Bautista: A culinary journey
+              </h3>
+              <p className="my-6 sm:text-lg">
                 Meet Chef DArconso, a culinary virtuoso with over 25 years of
                 culinary expertise. Her journey in the world of gastronomy has
                 been nothing short of extraordinary. Having honed her skills in
@@ -76,7 +81,7 @@ export default function Home() {
                 at the threshold of a new culinary adventure.
               </p>
 
-              <p className="mb-6 sm:hidden">
+              <p className="mb-6 hidden sm:text-lg lg:block">
                 Now, Chef DArconso embarks on a new standalone project, bringing
                 her unparalleled passion and expertise directly to you. Her
                 dedication to culinary excellence remains unwavering as she
@@ -85,7 +90,14 @@ export default function Home() {
               </p>
 
               <div className="text-center">
-                <a href="/" target="_blank">
+                <a
+                  href={process.env.NEXT_PUBLIC_INSTAGRAM}
+                  target="_blank"
+                  className={cn(
+                    buttonVariants({ variant: 'outline' }),
+                    'sm:text-xl',
+                  )}
+                >
                   Check my Instagram
                 </a>
               </div>
@@ -93,13 +105,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/*    <ExperiencesSection /> */}
+        <ExperiencesSection />
 
         <section className="text-center">
-          <h3 className="mt-8">Testimonies </h3>
+          <h2 className="mb-8 mt-12 text-5xl">Testimonies </h2>
           <div>
-            <div className="max-w-vw85 mx-auto ">
-              <h6>Culinary Delight at Its Finest!</h6>
+            <div>
+              <h4 className="mb-4 text-2xl">Culinary Delight at Its Finest!</h4>
               <p>
                 Chef culinary expertise is a true revelation. The flavors in
                 each dish are simply extraordinary. I get enough of the
