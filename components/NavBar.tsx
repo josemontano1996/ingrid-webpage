@@ -1,6 +1,8 @@
 import { BookOpen, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import HamburgerMenu from './HamburgerMenu';
+import MidNavBarLinks from './homePage/HomeMidNav';
+import MidNavBarProvider from './providers/MidNavBarProvider';
 
 const NavBar = ({ locale }: { locale: string }) => {
   return (
@@ -10,17 +12,7 @@ const NavBar = ({ locale }: { locale: string }) => {
           <Link href="/">IB</Link>
         </h1>
       </div>
-      <ul className=" hidden justify-between space-x-4 text-lg xs:flex sm:space-x-10 sm:text-2xl">
-        <li className="font-medium italic hover:underline">
-          <a href="#">The Chef</a>
-        </li>
-        <li className="font-medium italic hover:underline">
-          <a href="#">The Experience</a>
-        </li>
-        <li className="font-medium italic hover:underline">
-          <a href="#">The Menu</a>
-        </li>
-      </ul>
+      <MidNavBarProvider />
       <nav className="flex flex-1 justify-end ">
         <ul className="flex items-center space-x-4">
           <li>
