@@ -1,7 +1,6 @@
 import { BookOpen, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import HamburgerMenu from './HamburgerMenu';
-import MidNavBarLinks from './homePage/HomeMidNav';
 import MidNavBarProvider from './providers/MidNavBarProvider';
 
 const NavBar = ({ locale }: { locale: string }) => {

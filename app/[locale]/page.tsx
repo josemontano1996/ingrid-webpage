@@ -1,13 +1,13 @@
-import { Img } from '@/components/Img';
-import { buttonVariants } from '@/components/ui/button';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '../../lib/utils';
+import { buttonVariants } from '@/components/ui/button';
 import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import { SmoothScrollLink } from '@/components/SmoothScrollElement';
 import { ExperiencesSection } from '@/components/homePage/ExperiencesSection';
 
-export default function Home() {
+export default function Home({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   return (
     <>
       <div className=" bg-bgAlt py-8">
@@ -25,7 +25,7 @@ export default function Home() {
 
               <div className="text-center lg:space-x-8">
                 <Link
-                  href="/menu"
+                  href={`${locale}/menu`}
                   className={cn(
                     buttonVariants({ size: 'lg' }),
                     'hidden text-xl lg:inline-flex',
@@ -59,7 +59,7 @@ export default function Home() {
       <MaxWidthWrapper>
         <section id="chef" className="text-center">
           <h2 className="my-16 text-center text-5xl">The Chef</h2>
-          <div className="grid grid-cols-1 items-center space-y-4 sm:space-y-0 sm:grid-cols-2 sm:gap-6">
+          <div className="grid grid-cols-1 items-center space-y-4 sm:grid-cols-2 sm:gap-6 sm:space-y-0">
             <div className="mx-auto">
               <Image
                 src="https://res.cloudinary.com/dfupfbnez/image/upload/v1696760817/pexels-miquel-ferran-gomez-figueroa-3814446_vunxq8.jpg"

@@ -33,7 +33,9 @@ const HamburgerMenu = () => {
         <MenubarTrigger>
           <Menu />
         </MenubarTrigger>
-        <MenubarContent className={cn('space-y-2 px-[2vw] py-4 text-xl')}>
+        <MenubarContent
+          className={cn('z-40 space-y-2 bg-white px-[2vw] py-4 text-xl')}
+        >
           <MenubarItem>
             <Link
               href={`/${locale}/delivery`}
