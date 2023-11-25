@@ -47,8 +47,8 @@ export default function Home({ params }: { params: { locale: string } }) {
             <div>
               <Image
                 src="https://res.cloudinary.com/dfupfbnez/image/upload/v1696712336/hero_ea7ibx.webp"
-                width={600}
-                height={500}
+                width={720}
+                height={1280}
                 alt="Hero-Image"
               />
             </div>
@@ -63,9 +63,8 @@ export default function Home({ params }: { params: { locale: string } }) {
             <div className="mx-auto">
               <Image
                 src="https://res.cloudinary.com/dfupfbnez/image/upload/v1696760817/pexels-miquel-ferran-gomez-figueroa-3814446_vunxq8.jpg"
-                width={500}
-                height={500}
-                unoptimized
+                width={720}
+                height={1280}
                 alt="chef photo"
               />
             </div>

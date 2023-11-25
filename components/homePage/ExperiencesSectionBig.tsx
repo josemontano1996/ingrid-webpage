@@ -32,8 +32,8 @@ export const ExperiencesSectionBig: FC = () => {
         <div>
           <Image
             src="https://res.cloudinary.com/dfupfbnez/image/upload/v1684227502/ingrid-chef-webpage/focaccia-min-min-min_bsfnup.jpg"
-            width={500}
-            height={500}
+            width={640}
+            height={480}
             alt="Hero-Image"
           />
         </div>
@@ -41,8 +41,8 @@ export const ExperiencesSectionBig: FC = () => {
           <Image
             src="https://res.cloudinary.com/dfupfbnez/image/upload/v1684226733/ingrid-chef-webpage/chef-min_ozt35l.jpg"
             alt="Hero-Image"
-            width={500}
-            height={500}
+            width={640}
+            height={480}
           />
         </div>
         <div>
@@ -92,8 +92,8 @@ export const ExperiencesSectionBig: FC = () => {
           <Image
             src="https://res.cloudinary.com/dfupfbnez/image/upload/v1684227649/ingrid-chef-webpage/private-lessons-min-min_gtzge6.jpg"
             alt="Hero-Image"
-            width={500}
-            height={500}
+            width={640}
+            height={480}
           />
         </div>
       </div>
