@@ -16,7 +16,7 @@ const NavBar = () => {
       <nav className="flex flex-1 justify-end ">
         <ul className="flex items-center space-x-4">
           <li>
-            <LocaleLink path={`/user/orders`} styling="block xs:hidden">
+            <LocaleLink path={`/menu`} styling="block xs:hidden">
               <BookOpen />
             </LocaleLink>
           </li>

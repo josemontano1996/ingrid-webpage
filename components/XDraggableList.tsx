@@ -1,0 +1,48 @@
+'use client';
+import { cn } from '@/lib/utils';
+import { MouseEvent, ReactNode, useRef, useState } from 'react';
+
+const XDraggableList = ({
+  children,
+  styling,
+}: {
+  children: ReactNode;
+  styling?: string;
+}) => {
+  const dragContainer = useRef<HTMLUListElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (event: MouseEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    setStartX(event.clientX);
+    setScrollLeft(dragContainer.current?.scrollLeft || 0);
+  };
+
+  const handleMouseMove = (event: MouseEvent<HTMLUListElement>) => {
+    if (!isDragging || !dragContainer.current) return;
+
+    const distance = event.clientX - startX;
+    dragContainer.current.scrollLeft = scrollLeft - distance;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  return (
+    <ul
+      ref={dragContainer}
+      onMouseDown={handleMouseDown}
+      onMouseMove={isDragging ? handleMouseMove : undefined}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      className={cn('select-none gap-8 overflow-x-hidden', styling)}
+    >
+      {children}
+    </ul>
+  );
+};
+
+export default XDraggableList;

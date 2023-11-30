@@ -3,7 +3,7 @@ import { cn } from '../../lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import { SmoothScrollLink } from '@/components/SmoothScrollElement';
-import { ExperiencesSection } from '@/components/homePage/ExperiencesSection';
+import { ExperiencesSection } from '@/components/home-page/ExperiencesSection';
 import LocaleLink from '@/components/LocaleLink';
 
 export default function Home({ params }: { params: { locale: string } }) {

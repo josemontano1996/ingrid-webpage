@@ -1,8 +1,8 @@
 'use client';
 
 import { useParams, usePathname } from 'next/navigation';
-import HomeMidNav from '../homePage/HomeMidNav';
-import MenuMidNav from '../menuPage/MenuMidNav';
+import HomeMidNav from '../home-page/HomeMidNav';
+import MenuMidNav from '../menu-page/MenuMidNav';
 
 const MidNavBarProvider = () => {
   const { locale }: { locale: string } = useParams();
