@@ -9,7 +9,7 @@ import MenuItem from './MenuItem';
 const Menu = () => {
   return (
     <section className="ml-[5vw] sm:ml-[3vw]">
-      <h2 className="py-10 text-4xl font-semibold">Starters</h2>
+      <h2 className="py-5 text-4xl font-semibold">Starters</h2>
       <XDraggableList styling="grid w-[92vw] grid-flow-col">
         {starterDishes.map((item, i) => (
           <MenuItem key={i} item={item} />

@@ -1,8 +1,9 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useContext, useRef, useState } from 'react';
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -11,14 +12,17 @@ import {
 } from '../ui/dialog';
 
 import { Button, buttonVariants } from '../ui/button';
-import { IMenuItem } from '@/interfaces/IMenuItem';
 import { cn } from '@/lib/utils';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { ICartItem } from '@/interfaces/ICartItem';
+import { CartContext } from '@/context/cart/CartContext';
 
 const AddToCartDialog = ({ item }: { item: ICartItem }) => {
+  const { updateCart } = useContext(CartContext);
+  const closeButton = useRef<HTMLButtonElement | null>(null);
   const [quantity, setQuantity] = useState<number>(item.minServings || 0);
+
   const onQuantityChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(target.value);
     if (item.minServings && newValue < item.minServings) {
@@ -33,7 +37,10 @@ const AddToCartDialog = ({ item }: { item: ICartItem }) => {
       return;
     }
     item.quantity = quantity;
-    console.log('form');
+
+    updateCart(item);
+    closeButton && closeButton.current?.click();
+
     //TODO: create updateCart funtionalities
   };
 
@@ -76,6 +83,7 @@ const AddToCartDialog = ({ item }: { item: ICartItem }) => {
           />
           <button className={cn(buttonVariants(), 'w-32')}>Add to Cart</button>
         </form>
+        <DialogClose ref={closeButton} />
       </DialogContent>
     </Dialog>
   );
