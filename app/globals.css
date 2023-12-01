@@ -14,13 +14,24 @@ html {
 body::-webkit-scrollbar {
   display: none;
 } 
+ 
 
-.invisible-scrollbar {
-  scrollbar-width: none;
+.little-scrollbar::-webkit-scrollbar {
+  height: 2px;
 }
 
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+.little-scrollbar::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Track color */
+}
+
+.little-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Firefox */
+.little-scrollbar {
+  scrollbar-color: #888888 #f5f5f5; /* Thumb and track color */
 }
 
 @layer base {

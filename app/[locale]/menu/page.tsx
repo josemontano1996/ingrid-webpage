@@ -6,7 +6,7 @@ const page = () => {
     <>
       <MaxWidthWrapper>
         <h3 className="py-4 text-center text-4xl font-semibold sm:text-5xl lg:text-6xl">
-          House made food, like your Nonna did, at the reach of your hand.
+          Exquisite Mediterranean Flavors: A Culinary Journey with {process.env.NEXT_PUBLIC_NAME}
         </h3>
       </MaxWidthWrapper>
       <Menu />

@@ -2,6 +2,7 @@ import NavBar from '@/components/NavBar';
 import { cn } from '@/lib/utils';
 import '../globals.css';
 import { Cormorant } from 'next/font/google';
+import { Footer } from '@/components/Footer';
 
 const cormorant = Cormorant({ subsets: ['latin'] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         <main className="relative flex min-h-screen flex-col">
           <div className="flex-1 flex-grow">{children}</div>
         </main>
+        <Footer />
       </body>
     </html>
   );

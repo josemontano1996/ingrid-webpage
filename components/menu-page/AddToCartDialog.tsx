@@ -61,21 +61,19 @@ const AddToCartDialog = ({ item }: { item: ICartItem }) => {
           </DialogDescription>
         </DialogHeader>
         <form
-          className="flex flex-col space-y-6 text-xl"
+          className="flex flex-col items-center space-y-6 text-xl"
           onSubmit={onFormSubmit}
         >
-          <div className="flex items-center space-x-3">
-            <Label htmlFor="quantity" className="text-xl">
-              Quantity
-            </Label>
-            <Input
-              name="quantity"
-              value={quantity}
-              type="number"
-              className="w-20 text-center text-xl font-medium"
-              onChange={onQuantityChange}
-            />
-          </div>
+          <Label htmlFor="quantity" className="text-xl">
+            Quantity:
+          </Label>
+          <Input
+            name="quantity"
+            value={quantity}
+            type="number"
+            className="w-20 text-center text-xl font-medium"
+            onChange={onQuantityChange}
+          />
           <button className={cn(buttonVariants(), 'w-32')}>Add to Cart</button>
         </form>
       </DialogContent>

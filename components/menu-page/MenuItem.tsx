@@ -7,7 +7,7 @@ import AddToCartDialog from './AddToCartDialog';
 
 const MenuItem = ({ item }: { item: IMenuItem }) => {
   return (
-    <li className="space-y-2 w-[350px]">
+    <li className="space-y-2 sm:w-[350px] w-[90vw] h-full flex flex-col justify-between pb-4">
       <div>
         <Image
           onMouseDown={(e) => e.preventDefault()}

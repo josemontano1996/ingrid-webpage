@@ -38,7 +38,7 @@ const XDraggableList = ({
       onMouseMove={isDragging ? handleMouseMove : undefined}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className={cn('select-none gap-10 overflow-auto invisible-scrollbar', styling)}
+      className={cn('select-none overflow-x-auto little-scrollbar gap-8 h-full', styling)}
     >
       {children}
     </ul>

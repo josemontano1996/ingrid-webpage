@@ -29,7 +29,9 @@ const MoreInfoDialog = ({
           <DialogTitle className="text-3xl font-semibold">{name}</DialogTitle>
           <DialogDescription className="text-xl font-medium text-black">
             {allergens?.length! > 0 ? (
-              <span>Allegens: {allergens} </span>
+              <span>
+                Allegens: {allergens?.join(', ').toLocaleLowerCase()}.
+              </span>
             ) : (
               'No allergens'
             )}
