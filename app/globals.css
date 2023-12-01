@@ -6,14 +6,23 @@ html {
   scroll-behavior: smooth;
 }
 
-/*  body {
+ body {
   scrollbar-width: none;
 }
 
+
 body::-webkit-scrollbar {
   display: none;
+} 
+
+.invisible-scrollbar {
+  scrollbar-width: none;
 }
- */
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -38,8 +47,6 @@ body::-webkit-scrollbar {
     --radius: 0.5rem;
   }
 
-
- 
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
@@ -63,7 +70,6 @@ body::-webkit-scrollbar {
   }
 }
 
- 
 @layer base {
   * {
     @apply border-border;

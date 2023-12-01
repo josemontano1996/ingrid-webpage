@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
       <MaxWidthWrapper>
-        <h3 className="py-8 text-center text-4xl font-semibold sm:text-5xl lg:text-6xl">
+        <h3 className="py-4 text-center text-4xl font-semibold sm:text-5xl lg:text-6xl">
           House made food, like your Nonna did, at the reach of your hand.
         </h3>
       </MaxWidthWrapper>
