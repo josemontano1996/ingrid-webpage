@@ -58,6 +58,7 @@ export const CartProvider: FC<Props> = ({ children }) => {
         ? dispatch({ type: 'Cart-delete item', payload: cartItem })
         : dispatch({ type: 'Cart-update item quantity', payload: cartItem });
     } else {
+      console.log('here');
       dispatch({ type: 'Cart-add item', payload: cartItem });
     }
   };

@@ -21,7 +21,11 @@ const NavBar = () => {
             </LocaleLink>
           </li>
           <li>
-            <LocaleLink path={`/cart`} styling="inline-block">
+            <LocaleLink
+              prefetching={false}
+              path={`/cart`}
+              styling="inline-block"
+            >
               <ShoppingCart />
             </LocaleLink>
           </li>
