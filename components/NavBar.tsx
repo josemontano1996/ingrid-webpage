@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { BookOpen, ShoppingCart } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import HamburgerMenu from './HamburgerMenu';
 import MidNavBarProvider from './providers/MidNavBarProvider';
 import LocaleLink from './LocaleLink';
+import ShoppingCartIcon from './ShoppingCartIcon';
 
 const NavBar = () => {
   return (
@@ -20,13 +21,13 @@ const NavBar = () => {
               <BookOpen />
             </LocaleLink>
           </li>
-          <li>
+          <li className="relative p-2">
             <LocaleLink
               prefetching={false}
               path={`/cart`}
               styling="inline-block"
             >
-              <ShoppingCart />
+              <ShoppingCartIcon />
             </LocaleLink>
           </li>
           <li>

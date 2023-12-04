@@ -1,8 +1,10 @@
+import { getAllProducts } from '@/database/dbProducts';
 import XDraggableList from '../XDraggableList';
 import MenuItem from './MenuItem';
 import { IMenuItem } from '@/interfaces/IMenuItem';
 
-const Menu = ({ products }: { products: IMenuItem[] }) => {
+const Menu = async () => {
+  const products: IMenuItem[] = await getAllProducts();
   const starterDishes = products.filter(
     (product) => product.type === 'starter',
   );

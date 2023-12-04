@@ -1,7 +1,5 @@
 import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import Menu from '@/components/menu-page/Menu';
-import { getAllProducts } from '@/database/dbProducts';
-import { IMenuItem } from '@/interfaces/IMenuItem';
 import { Metadata } from 'next';
 
 export const revalidate = 86400;
@@ -12,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 const page = async () => {
-  const products: IMenuItem[] = await getAllProducts();
-
   return (
     <>
       <MaxWidthWrapper>
@@ -22,7 +18,7 @@ const page = async () => {
           {process.env.NEXT_PUBLIC_NAME}
         </h3>
       </MaxWidthWrapper>
-      <Menu products={products} />
+      <Menu />
     </>
   );
 };

@@ -8,11 +8,21 @@ import { cartReducer } from './cartReducer';
 import { ICartItem } from '@/interfaces/ICartItem';
 
 export interface CartState {
+  isLoaded: boolean;
   cart: ICartItem[];
+  numberOfItems: number;
+  subTotal: number;
+  tax: number;
+  total: number;
 }
 
 const Cart_INITIAL_STATE: CartState = {
+  isLoaded: false,
   cart: Cookie.get('cart') ? JSON.parse(Cookie.get('cart')!) : [],
+  numberOfItems: 0,
+  subTotal: 0,
+  tax: 0,
+  total: 0,
 };
 
 interface Props {
@@ -45,6 +55,27 @@ export const CartProvider: FC<Props> = ({ children }) => {
       console.log('Error updating cart');
       alert('An error ocurred, try again later.');
     }
+  }, [state.cart]);
+
+  useEffect(() => {
+    const numberOfItems = state.cart.reduce(
+      (prev, current) => current.quantity! + prev,
+      0,
+    );
+    const subTotal = state.cart.reduce(
+      (prev, current) => current.price * current.quantity! + prev,
+      0,
+    );
+
+    const taxRate = Number(process.env.NEXT_PUBLIC_TAX_RATE || 0);
+
+    const orderSummary = {
+      numberOfItems,
+      subTotal,
+      tax: subTotal * taxRate,
+      total: subTotal * (1 + taxRate),
+    };
+    dispatch({ type: 'Cart-update order summary', payload: orderSummary });
   }, [state.cart]);
 
   //this update functions manages to find if a product exists, if it exists already
