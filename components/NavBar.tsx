@@ -15,9 +15,9 @@ const NavBar = () => {
       </div>
       <MidNavBarProvider />
       <nav className="flex flex-1 justify-end ">
-        <ul className="flex items-center space-x-4">
+        <ul className="flex items-center justify-between space-x-2">
           <li>
-            <LocaleLink path={`/menu`} styling="block xs:hidden">
+            <LocaleLink path={`/menu`} styling="inline-block">
               <BookOpen />
             </LocaleLink>
           </li>

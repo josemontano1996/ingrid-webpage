@@ -1,0 +1,37 @@
+
+import { ShoppingCart, User2, Inbox, LogOut } from 'lucide-react';
+import { MenubarItem } from '../ui/menubar';
+import LocaleLink from '../LocaleLink';
+import ProviderClientSection from './ProviderClientSection';
+
+const ClientSection = () => {
+  return (
+    <ProviderClientSection>
+      <h3 className="text-2xl">User section</h3>
+      <MenubarItem className="text-xl">
+        <LocaleLink
+          path={`/cart`}
+          styling="flex space-x-4 text-gray-600 hover:text-gray-800"
+        >
+          <ShoppingCart />
+          <div>Cart</div>
+        </LocaleLink>
+      </MenubarItem>
+      <MenubarItem className="text-xl">
+        <LocaleLink path={`/account`} styling="flex space-x-4 text-gray-600">
+          <User2 />
+          <div>Account</div>
+        </LocaleLink>
+      </MenubarItem>
+      <MenubarItem className="text-xl">
+        <LocaleLink path={`/orders`} styling="flex space-x-4 text-gray-600">
+          <Inbox />
+          <div>Orders</div>
+        </LocaleLink>
+      </MenubarItem>
+
+    </ProviderClientSection>
+  );
+};
+
+export default ClientSection;
