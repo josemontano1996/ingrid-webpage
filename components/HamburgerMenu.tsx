@@ -1,6 +1,4 @@
-'use client';
-
-import { Menu, UserCircle2 } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
 import LocaleLink from './LocaleLink';
@@ -10,16 +8,16 @@ import {
   MenubarItem,
   MenubarMenu,
   MenubarSeparator,
-  MenubarSub,
-  MenubarSubTrigger,
   MenubarTrigger,
 } from './ui/menubar';
 import ClientSection from './hamburger-menu/ClientSection';
 import AdminSection from './hamburger-menu/AdminSection';
 import SignInOutButton from './SignInOutButton';
+import { getUserRole } from '@/lib/getUserRole';
 
+const HamburgerMenu = async () => {
+  const userRole = await getUserRole();
 
-const HamburgerMenu = () => {
   return (
     <Menubar>
       <MenubarMenu>
@@ -43,8 +41,8 @@ const HamburgerMenu = () => {
             </LocaleLink>
           </MenubarItem>
           <Separator />
-          <ClientSection />
-          <AdminSection />
+          {userRole === 'client' && <ClientSection />}
+          {userRole === 'admin' && <AdminSection />}
           <MenubarItem className="text-xl">
             <SignInOutButton />
           </MenubarItem>

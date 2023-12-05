@@ -5,10 +5,12 @@ import { Cormorant } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import { CartProvider } from '@/context/cart/CartProvider';
 import AuthSessionProvider from '@/components/providers/AuthSessionProvider';
+import { dir } from 'i18next';
+
 
 const cormorant = Cormorant({ subsets: ['latin'] });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -18,7 +20,7 @@ export default function RootLayout({
   return (
     <AuthSessionProvider>
       <CartProvider>
-        <html lang={locale}>
+        <html lang={locale} dir={dir(locale)}>
           <body className={cn('relative h-full', cormorant.className)}>
             <NavBar />
             <main className="relative flex min-h-screen flex-col">

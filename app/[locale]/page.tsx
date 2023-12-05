@@ -7,7 +7,7 @@ import { ExperiencesSection } from '@/components/home-page/ExperiencesSection';
 import LocaleLink from '@/components/LocaleLink';
 
 export default function Home({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+  
   return (
     <>
       <div className=" bg-bgAlt py-8">

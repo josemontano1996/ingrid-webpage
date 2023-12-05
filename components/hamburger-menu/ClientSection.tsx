@@ -2,11 +2,11 @@
 import { ShoppingCart, User2, Inbox, LogOut } from 'lucide-react';
 import { MenubarItem } from '../ui/menubar';
 import LocaleLink from '../LocaleLink';
-import ProviderClientSection from './ProviderClientSection';
+
 
 const ClientSection = () => {
   return (
-    <ProviderClientSection>
+    <>
       <h3 className="text-2xl">User section</h3>
       <MenubarItem className="text-xl">
         <LocaleLink
@@ -30,7 +30,7 @@ const ClientSection = () => {
         </LocaleLink>
       </MenubarItem>
 
-    </ProviderClientSection>
+    </>
   );
 };
 

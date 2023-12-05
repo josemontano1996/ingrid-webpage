@@ -3,15 +3,13 @@ import {
   ShoppingBasket,
   Folders,
   UserCog,
-  LogOut,
 } from 'lucide-react';
 import LocaleLink from '../LocaleLink';
 import { MenubarItem } from '../ui/menubar';
-import ProviderAdminSection from './ProviderAdminSection';
 
 const AdminSection = () => {
   return (
-    <ProviderAdminSection>
+    <>
       <h3 className="text-2xl">Admin section</h3>
       <MenubarItem className="text-xl">
         <LocaleLink
@@ -49,8 +47,7 @@ const AdminSection = () => {
           <div>Usuarios</div>
         </LocaleLink>
       </MenubarItem>
-
-    </ProviderAdminSection>
+    </>
   );
 };
 
