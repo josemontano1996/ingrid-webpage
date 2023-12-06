@@ -1,7 +1,8 @@
+import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import { checkOAuthUser } from '@/database/dbUsers';
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || '',
@@ -14,11 +15,12 @@ export const authOptions = {
     error: '/[locale]/auth/signin',
   },
   session: {
+    strategy: 'jwt',
     maxAge: 2592000,
     updateAge: 86400,
   },
   callbacks: {
-    async jwt({ token, account, user }:any) {
+    async jwt({ token, account, user }: any) {
       if (account) {
         token.accessToken = account.access_token;
         switch (account.type) {
@@ -38,6 +40,7 @@ export const authOptions = {
     async session({ session, token, user }: any) {
       session.accessToken = token.accessToken;
       session.user = token.user;
+
       return session;
     },
   },
