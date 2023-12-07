@@ -23,7 +23,7 @@ const SignInOutButton = () => {
     <>
       {!data ? (
         <a
-          className="flex space-x-4 text-gray-600 hover:text-gray-800"
+          className="flex space-x-4 text-gray-600 hover:cursor-pointer hover:text-gray-800"
           onClick={(e) => onSignIn(e)}
         >
           <UserCircle2 />
@@ -31,7 +31,7 @@ const SignInOutButton = () => {
         </a>
       ) : (
         <a
-          className="flex space-x-4 text-gray-600 hover:text-gray-800"
+          className="flex space-x-4 text-gray-600 hover:cursor-pointer hover:text-gray-800"
           onClick={(e) => onLogOut(e)}
         >
           <LogOut />

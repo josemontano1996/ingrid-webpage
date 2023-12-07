@@ -11,19 +11,16 @@ import {
   MenubarTrigger,
 } from './ui/menubar';
 import ClientSection from './hamburger-menu/ClientSection';
-import AdminSection from './hamburger-menu/AdminSection';
 import SignInOutButton from './SignInOutButton';
-import { getUserRole } from '@/lib/getUserRole';
 
 const HamburgerMenu = async () => {
-  const userRole = await getUserRole();
-
   return (
     <Menubar>
       <MenubarMenu>
         <MenubarTrigger className="p-0">
           <Menu />
         </MenubarTrigger>
+
         <MenubarContent className={cn('z-40 space-y-2 bg-white px-[2vw] py-4')}>
           <MenubarItem className="text-xl">
             <LocaleLink path={`/menu`} styling="italic hover:underline">
@@ -41,8 +38,7 @@ const HamburgerMenu = async () => {
             </LocaleLink>
           </MenubarItem>
           <Separator />
-          {userRole === 'client' && <ClientSection />}
-          {userRole === 'admin' && <AdminSection />}
+          <ClientSection />
           <MenubarItem className="text-xl">
             <SignInOutButton />
           </MenubarItem>

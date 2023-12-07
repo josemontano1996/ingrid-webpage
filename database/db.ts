@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
  * 2 = connecting
  * 3 = disconnecting
  */
-const mongoConnection = {
+export const mongoConnection = {
   isConnected: 0,
 };
 

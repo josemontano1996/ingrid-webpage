@@ -3,6 +3,7 @@ import i18nConfig from './i18nConfig';
 import { NextRequestWithAuth, withAuth } from 'next-auth/middleware';
 import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
 
 type User = {
   name?: string;
@@ -69,12 +70,11 @@ export default withAuth(
         return NextResponse.redirect(new URL(`/${locale}`, req.url));
       }
     }
-
     return i18nRouter(req, i18nConfig as any);
   },
   {
     callbacks: {
-      authorized: async () => {
+      authorized: async ({ req }) => {
         //I am passing all routes through the middleware as i need all of them
         //even the not authorized to get trough the i18nRouter
         return true;

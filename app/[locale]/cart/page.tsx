@@ -6,7 +6,6 @@ import CartSummary from '@/components/cart-page/CartSummary';
 const page = () => {
   const cookieCart = cookies().get('cart');
   const cart: ICartItem[] = cookieCart ? JSON.parse(cookieCart.value) : [];
-
   return (
     <div className="mx-[4vw] space-y-4 pt-8">
       <h2 className="text-4xl font-semibold">Cart</h2>

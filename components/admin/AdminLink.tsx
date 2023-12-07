@@ -1,34 +1,33 @@
 import { ReactNode } from 'react';
-import Link from 'next/link';
 import getServerLocale from '@/lib/getServerLocale';
 
 interface Props {
   children: ReactNode;
   path: string;
   styling?: string;
-  prefetching?: boolean;
+/*   prefetching?: boolean; */
 }
 
-const LocaleLink = ({
+const AdminLink = ({
   children,
   path,
   styling = '',
-  prefetching = true,
+ /*  prefetching = true, */
 }: Props) => {
   const locale = getServerLocale();
   return (
     <>
-      {prefetching ? (
-        <Link href={`/${locale}${path}`} className={styling}>
+    {/*   {prefetching ? (
+        <Link href={`/${locale}/protected/admin/${path}`} className={styling}>
           {children}
         </Link>
-      ) : (
-        <a href={`/${locale}${path}`} className={styling}>
+      ) : ( */}
+        <a href={`/${locale}/protected/admin${path}`} className={styling}>
           {children}
         </a>
-      )}
+     {/*  )} */}
     </>
   );
 };
 
-export default LocaleLink;
+export default AdminLink;

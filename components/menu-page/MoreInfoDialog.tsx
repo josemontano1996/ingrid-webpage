@@ -10,7 +10,7 @@ import {
 } from '../ui/dialog';
 import { Button } from '../ui/button';
 
-import { IAllergens, IMenuItem } from '@/interfaces/IMenuItem';
+import { IAllergens } from '@/interfaces/IMenuItem';
 
 const MoreInfoDialog = ({
   allergens,

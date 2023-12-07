@@ -1,5 +1,6 @@
 import User from '@/models/User';
 import { db } from '.';
+import getServerLocale from '@/lib/getServerLocale';
 
 export const checkOAuthUser = async (
   oAuthEmail: string,
@@ -25,12 +26,12 @@ export const checkOAuthUser = async (
   });
   try {
     await newUser.save();
+    await db.disconnect();
     const { _id, name, email, role } = newUser;
     return { _id, name, email, role };
   } catch (error) {
     console.log(error);
+    await db.disconnect();
     return;
-  } finally {
-    db.disconnect();
   }
 };
