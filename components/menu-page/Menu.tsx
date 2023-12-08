@@ -4,12 +4,12 @@ import MenuItem from './MenuItem';
 import { IMenuItem } from '@/interfaces/IMenuItem';
 
 const Menu = async () => {
-
+  
   const products: IMenuItem[] = await getAllProducts();
+
   const starterDishes = products.filter(
     (product) => product.type === 'starter',
-    );
-    console.log('here');
+  );
 
   const mainDishes = products.filter((product) => product.type === 'mainDish');
 

@@ -2,7 +2,6 @@ import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import Menu from '@/components/menu-page/Menu';
 import { Metadata } from 'next';
 
-export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Menu Page',

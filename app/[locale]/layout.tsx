@@ -1,8 +1,8 @@
 import { Cormorant } from 'next/font/google';
 import { dir } from 'i18next';
 import NavBar from '@/components/NavBar';
-import i18nConfig from '@/i18nConfig';
 import { cn } from '@/lib/utils';
+import i18nConfig from '@/i18nConfig';
 import '../globals.css';
 import { Footer } from '@/components/Footer';
 import { CartProvider } from '@/context/cart/CartProvider';

@@ -11,7 +11,7 @@ const ProductsPage = async () => {
           {process.env.NEXT_PUBLIC_NAME}
         </h3>
       </MaxWidthWrapper>
-      <Menu />
+     {/*  <Menu /> */}
     </>
   );
 };

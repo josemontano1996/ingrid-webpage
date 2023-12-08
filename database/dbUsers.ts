@@ -1,18 +1,18 @@
 import User from '@/models/User';
-import { db } from '.';
-import getServerLocale from '@/lib/getServerLocale';
+import { dbConnect, dbDisconnect } from './dbConntect';
+
 
 export const checkOAuthUser = async (
   oAuthEmail: string,
   oAuthName: string,
   oAuthImage: string,
 ) => {
-  await db.connect();
+  dbConnect();
   const user = await User.findOne({ email: oAuthEmail });
 
   //User already exists, procceed to log in
   if (user) {
-    await db.disconnect();
+    await dbDisconnect()
     const { _id, name, email, role } = user;
     return { _id, name, email, role };
   }
@@ -26,12 +26,12 @@ export const checkOAuthUser = async (
   });
   try {
     await newUser.save();
-    await db.disconnect();
+    await dbDisconnect()
     const { _id, name, email, role } = newUser;
     return { _id, name, email, role };
   } catch (error) {
     console.log(error);
-    await db.disconnect();
+    await dbDisconnect()
     return;
   }
 };
