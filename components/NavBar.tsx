@@ -9,7 +9,7 @@ import { getUserRole } from '@/lib/getUserRole';
 import AdminNavBar from './admin/AdminNavBar';
 
 const NavBar = async () => {
-  const role = await getUserRole();
+ /*  const role = await getUserRole(); */
 
   return (
     <header className="sticky top-0 z-40 flex w-full items-center justify-between bg-white px-[2vw] py-1">
@@ -18,7 +18,7 @@ const NavBar = async () => {
           <Link href="/">IB</Link>
         </h1>
       </div>
-      {role === 'admin' ? (
+     {/*  {role === 'admin' ? (
         <AdminNavBar />
       ) : (
         <>
@@ -47,7 +47,7 @@ const NavBar = async () => {
             </ul>
           </nav>
         </>
-      )}
+      )} */}
     </header>
   );
 };
