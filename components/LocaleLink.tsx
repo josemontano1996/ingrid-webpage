@@ -1,6 +1,7 @@
+'use client';
 import { ReactNode } from 'react';
 import Link from 'next/link';
-import getServerLocale from '@/lib/getServerLocale';
+import { useParams } from 'next/navigation';
 
 interface Props {
   children: ReactNode;
@@ -15,7 +16,7 @@ const LocaleLink = ({
   styling = '',
   prefetching = true,
 }: Props) => {
-  const locale = getServerLocale();
+  const { locale } = useParams();
   return (
     <>
       {prefetching ? (

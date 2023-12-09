@@ -9,7 +9,7 @@ import { useParams, usePathname } from 'next/navigation';
 //reliant header in Next 14 for getting the current pathname in a server component
 //so i came out with this easy solution
 
-const ConditionalDisplay = ({
+const UrlBasedRenderer = ({
   children,
   route,
   mustBeEqual,
@@ -31,4 +31,4 @@ const ConditionalDisplay = ({
   return null;
 };
 
-export default ConditionalDisplay;
+export default UrlBasedRenderer;

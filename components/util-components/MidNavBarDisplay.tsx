@@ -4,7 +4,7 @@ import { useParams, usePathname } from 'next/navigation';
 import HomeMidNav from '../home-page/HomeMidNav';
 import MenuMidNav from '../menu-page/MenuMidNav';
 
-const MidNavBarProvider = () => {
+const MidNavBarDisplay = () => {
   const { locale }: { locale: string } = useParams();
   const pathname = usePathname();
   return (
@@ -15,4 +15,4 @@ const MidNavBarProvider = () => {
   );
 };
 
-export default MidNavBarProvider;
+export default MidNavBarDisplay;

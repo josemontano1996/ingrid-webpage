@@ -1,6 +1,6 @@
 import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-import { checkOAuthUser } from '@/database/dbUsers';
+import { checkOAuthUser } from '@/database/dynamic/dbUsers';
 
 export const authOptions: NextAuthOptions = {
   providers: [

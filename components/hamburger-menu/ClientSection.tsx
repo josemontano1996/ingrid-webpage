@@ -1,8 +1,6 @@
-
 import { ShoppingCart, User2, Inbox, LogOut } from 'lucide-react';
 import { MenubarItem } from '../ui/menubar';
 import LocaleLink from '../LocaleLink';
-
 
 const ClientSection = () => {
   return (
@@ -29,7 +27,6 @@ const ClientSection = () => {
           <div>Orders</div>
         </LocaleLink>
       </MenubarItem>
-
     </>
   );
 };

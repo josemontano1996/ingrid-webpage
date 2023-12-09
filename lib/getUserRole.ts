@@ -1,7 +1,6 @@
 import { getServerSession } from 'next-auth';
 import { authOptions } from './auth';
 
-export const dynamic = 'force-dynamic';
 
 //this function can not be used in the Edge (middleware), it is 
 //not supported yet

@@ -1,18 +1,19 @@
 import User from '@/models/User';
-import { dbConnect, dbDisconnect } from './dbConntect';
-
+import { dbConnect, dbDisconnect } from '../db';
+import { unstable_noStore } from 'next/cache';
 
 export const checkOAuthUser = async (
   oAuthEmail: string,
   oAuthName: string,
   oAuthImage: string,
 ) => {
-  dbConnect();
+  unstable_noStore();
+  await dbConnect();
   const user = await User.findOne({ email: oAuthEmail });
 
   //User already exists, procceed to log in
   if (user) {
-    await dbDisconnect()
+    await dbDisconnect();
     const { _id, name, email, role } = user;
     return { _id, name, email, role };
   }
@@ -26,12 +27,12 @@ export const checkOAuthUser = async (
   });
   try {
     await newUser.save();
-    await dbDisconnect()
+    await dbDisconnect();
     const { _id, name, email, role } = newUser;
     return { _id, name, email, role };
   } catch (error) {
     console.log(error);
-    await dbDisconnect()
+    await dbDisconnect();
     return;
   }
 };
