@@ -1,17 +1,14 @@
 import { getAllProducts } from '@/database/caching/dbProducts';
-import XDraggableList from '../XDraggableList';
-import MenuItem from './MenuItem';
-import { IMenuItem } from '@/interfaces/IMenuItem';
-import { redirect } from 'next/navigation';
 
-const Menu = async ({ locale }: { locale: string }) => {
+import MenuItem from './AdminMenuItem';
+import { IMenuItem } from '@/interfaces/IMenuItem';
+
+import XDraggableList from '@/components/XDraggableList';
+
+const AdminProducts = async () => {
   let products: IMenuItem[] = await getAllProducts({
     cache: true,
   });
-
-  if (products.length === 0) {
-    redirect(`/${locale}/error`);
-  }
 
   const starterDishes = products.filter(
     (product) => product.type === 'starter',
@@ -24,19 +21,19 @@ const Menu = async ({ locale }: { locale: string }) => {
   );
   return (
     <section className="ml-[5vw] sm:ml-[3vw]">
-      <h2 className="py-5 text-4xl font-semibold">Starters</h2>
+      <h2 className="py-5 text-4xl font-semibold">Entrantes</h2>
       <XDraggableList styling="grid w-[92vw] grid-flow-col">
         {starterDishes.map((item, i) => (
           <MenuItem key={i} item={item} />
         ))}
       </XDraggableList>
-      <h2 className="py-10 text-4xl font-semibold">Main Course</h2>
+      <h2 className="py-10 text-4xl font-semibold">Principal</h2>
       <XDraggableList styling="grid w-[92vw] grid-flow-col">
         {mainDishes.map((item, i) => (
           <MenuItem key={i} item={item} />
         ))}
       </XDraggableList>
-      <h2 className="py-10 text-4xl font-semibold">Desserts</h2>
+      <h2 className="py-10 text-4xl font-semibold">Postres</h2>
       <XDraggableList styling="grid w-[92vw] grid-flow-col">
         {dessertDishes.map((item, i) => (
           <MenuItem key={i} item={item} />
@@ -46,4 +43,4 @@ const Menu = async ({ locale }: { locale: string }) => {
   );
 };
 
-export default Menu;
+export default AdminProducts;

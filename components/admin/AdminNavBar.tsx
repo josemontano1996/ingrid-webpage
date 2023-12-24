@@ -21,9 +21,9 @@ const AdminNavBar = () => {
         </AdminLink>
       </li>
       <li className="text-xl">
-        <AdminLink path={'/products'} styling="flex space-x-4 text-gray-600">
+        <AdminLink path={'/menu'} styling="flex space-x-4 text-gray-600">
           <ShoppingBasket />
-          <div>Productos</div>
+          <div>Menú</div>
         </AdminLink>
       </li>
       <li className="text-xl">

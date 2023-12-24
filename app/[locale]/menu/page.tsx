@@ -2,13 +2,12 @@ import MaxWidthWrapper from '@/components/Wrappers/MaxWidthWrapper';
 import Menu from '@/components/menu-page/Menu';
 import { Metadata } from 'next';
 
-
 export const metadata: Metadata = {
   title: 'Menu Page',
   description: `Chef Bautista Menu page`,
 };
 
-const page = async () => {
+const page = async ({ params: { locale } }: { params: { locale: string } }) => {
   return (
     <>
       <MaxWidthWrapper>
@@ -17,7 +16,7 @@ const page = async () => {
           {process.env.NEXT_PUBLIC_NAME}
         </h3>
       </MaxWidthWrapper>
-      <Menu />
+      <Menu locale={locale} />
     </>
   );
 };

@@ -1,10 +1,9 @@
-import { apiTrial } from '@/database/cached/dbProducts';
+import { apiTrial } from '@/database/caching/dbProducts';
 import React from 'react';
 
 const OrdersPage = () => {
-  const number = apiTrial();
 
-  return <div>{number}</div>;
+  return <div></div>;
 };
 
 export default OrdersPage;
