@@ -52,7 +52,7 @@ export const adminAllergens = [
     label: 'Altramuces',
   },
   {
-    id: 'mollucs',
+    id: 'molluscs',
     label: 'Moluscos',
   },
 ] as const;

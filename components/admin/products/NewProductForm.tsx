@@ -24,13 +24,36 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { adminAllergens } from '@/consts/allergens';
 import { Checkbox } from '@/components/ui/checkbox';
+import { createNewProduct } from '@/actions/product';
 
 const formSchema = z.object({
   image: z.instanceof(File),
-  type: z.string().min(1, { message: 'Campo requerido' }),
-  price: z.coerce.number().min(0.1, { message: 'Minimo 0.1' }),
+  type: z.enum(['starter', 'mainDish', 'dessert']),
+  price: z.coerce
+    .number()
+    .min(0.1, { message: 'Minimo 0.1' })
+    .transform((val) => Number(val.toFixed(2))),
   minServings: z.coerce.number().optional(),
-  allergens: z.array(z.string()).optional(),
+  allergens: z
+    .array(
+      z.enum([
+        'gluten',
+        'crustaceans',
+        'eggs',
+        'fish',
+        'peanuts',
+        'soy',
+        'milk',
+        'nuts',
+        'celery',
+        'mustard',
+        'sesame',
+        'so2',
+        'lupin',
+        'molluscs',
+      ]),
+    )
+    .optional(),
   en: z.object({
     name: z.string().min(1, { message: 'Campo requerido' }),
     description: z.string().min(1, { message: 'Campo requerido' }),
@@ -53,7 +76,7 @@ const NewProductForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       image: new File([], ''),
-      type: '',
+      type: undefined,
       price: undefined,
       minServings: undefined,
       allergens: [],
@@ -75,15 +98,21 @@ const NewProductForm = () => {
       },
     },
   });
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values.image);
-    console.log(values.allergens);
-  };
+  /* const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  
+    const parsedData: INewProduct = {
+      ...values,
+      image: await bufferImgToBase64(values.image),
+    };
+
+    const resp = await adminApi.post('/product', JSON.stringify(parsedData));
+  }; */
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        /* onSubmit={form.handleSubmit(onSubmit)} */ action={createNewProduct}
+        className="space-y-8"
+      >
         <div className="space-y-2">
           <FormField
             control={form.control}
@@ -95,6 +124,7 @@ const NewProductForm = () => {
                   <Input
                     accept=".jpg, .jpeg, .png"
                     type="file"
+                    name="image"
                     onChange={(e) =>
                       field.onChange(e.target.files ? e.target.files[0] : null)
                     }

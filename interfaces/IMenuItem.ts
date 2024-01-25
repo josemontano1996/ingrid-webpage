@@ -15,19 +15,19 @@ export interface IMenuItem {
 }
 
 export type IAllergens =
-  | 'Gluten'
-  | 'Crustaceans'
-  | 'Eggs'
-  | 'Fish'
-  | 'Peanuts'
-  | 'Soy'
-  | 'Milk'
-  | 'Nuts'
-  | 'Celery'
-  | 'Mustard'
-  | 'Sesame'
-  | 'SO2'
-  | 'Lupin'
-  | 'Molluscs';
+  | 'gluten'
+  | 'crustaceans'
+  | 'eggs'
+  | 'fish'
+  | 'peanuts'
+  | 'soy'
+  | 'milk'
+  | 'nuts'
+  | 'celery'
+  | 'mustard'
+  | 'sesame'
+  | 'so2'
+  | 'lupin'
+  | 'molluscs';
 
 export type IDishType = 'starter' | 'mainDish' | 'dessert';

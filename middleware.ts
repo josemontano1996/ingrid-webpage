@@ -3,7 +3,6 @@ import i18nConfig from './i18nConfig';
 import { NextRequestWithAuth, withAuth } from 'next-auth/middleware';
 import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 
 type User = {
   name?: string;
@@ -59,7 +58,7 @@ export default withAuth(
         const locale = requestedPage.split('/')[1];
         const url = new URL(
           `/${locale}/auth/signin?p=${requestedPage}`,
-          req.url,
+          process.env.DOMAIN_URL,
         );
 
         return NextResponse.redirect(url);
@@ -67,7 +66,10 @@ export default withAuth(
 
       if (requestedPage.includes('/admin') && userRole !== 'admin') {
         const locale = requestedPage.split('/')[1];
-        return NextResponse.redirect(new URL(`/${locale}`, req.url));
+        console.log(req.url);
+        return NextResponse.redirect(
+          new URL(`/${locale}`, process.env.DOMAIN_URL),
+        );
       }
     }
     return i18nRouter(req, i18nConfig as any);

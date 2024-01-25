@@ -5,16 +5,13 @@ export interface INewProduct {
   type: IDishType;
   price: number;
   minServings?: number;
+  allergens?: IAllergens[];
 
   en: {
     name: string;
     description: string;
-    allergens?: IAllergens[];
   };
-  es: { name: string; description: string; allergens?: IAllergens[] };
-  fr: { name: string; description: string; allergens?: IAllergens[] };
-  de: { name: string; description: string; allergens?: IAllergens[] };
-
-  name: string;
-  description: string;
+  es: { name: string; description: string };
+  fr: { name: string; description: string };
+  de: { name: string; description: string };
 }
