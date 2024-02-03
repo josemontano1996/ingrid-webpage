@@ -5,8 +5,10 @@ import { IMenuItem } from '@/interfaces/IMenuItem';
 
 import XDraggableList from '@/components/XDraggableList';
 
+export const revalidate = 0;
+
 const AdminProducts = async () => {
-  let products: IMenuItem[] = await getAllProducts();
+  let products: IMenuItem[] = await getAllProducts({ cache: false });
 
   const starterDishes = products.filter(
     (product) => product.type === 'starter',

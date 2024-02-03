@@ -5,7 +5,7 @@ import { IMenuItem } from '@/interfaces/IMenuItem';
 import { redirect } from 'next/navigation';
 
 const Menu = async ({ locale }: { locale: string }) => {
-  let products: IMenuItem[] = await getAllProducts();
+  let products: IMenuItem[] = await getAllProducts({ cache: true });
 
   if (products.length === 0) {
     redirect(`/${locale}/error`);

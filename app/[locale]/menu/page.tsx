@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   description: `Chef Bautista Menu page`,
 };
 
-export const revalidate = 0;
-
 const page = async ({ params: { locale } }: { params: { locale: string } }) => {
   return (
     <>
