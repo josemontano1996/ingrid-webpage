@@ -23,17 +23,17 @@ const HamburgerMenu = async () => {
 
         <MenubarContent className={cn('z-40 space-y-2 bg-white px-[2vw] py-4')}>
           <MenubarItem className="text-xl">
-            <LocaleLink path={`/menu`} styling="italic hover:underline">
+            <LocaleLink nextLink={true} path={`/menu`} styling="italic hover:underline">
               Menu
             </LocaleLink>
           </MenubarItem>
           <MenubarItem className="text-xl">
-            <LocaleLink path={`/delivery`} styling="italic hover:underline">
+            <LocaleLink nextLink={true} path={`/delivery`} styling="italic hover:underline">
               Private events
             </LocaleLink>
           </MenubarItem>
           <MenubarItem className="text-xl">
-            <LocaleLink path={`/delivery`} styling="italic hover:underline">
+            <LocaleLink nextLink={true} path={`/delivery`} styling="italic hover:underline">
               Workshops
             </LocaleLink>
           </MenubarItem>

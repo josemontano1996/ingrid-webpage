@@ -26,14 +26,18 @@ const NavBar = async () => {
           <ul className="flex items-center justify-between space-x-2">
             <ConditionalDisplay route={'/menu'} mustBeEqual={false}>
               <li>
-                <LocaleLink path={`/menu`} styling="inline-block">
+                <LocaleLink
+                  nextLink={true}
+                  path={`/menu`}
+                  styling="inline-block"
+                >
                   <BookOpen />
                 </LocaleLink>
               </li>
             </ConditionalDisplay>
             <li className="relative p-2">
               <LocaleLink
-                prefetching={false}
+                nextLink={false}
                 path={`/cart`}
                 styling="inline-block"
               >

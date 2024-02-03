@@ -8,7 +8,7 @@ export const starterDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697290155/ingrid-chef-webpage/capresesalad_fqmr2r.jpg',
     description:
       'A classic Italian starter featuring ripe tomatoes, fresh mozzarella, basil leaves, and balsamic glaze.',
-    allergens: ['Milk'],
+    allergens: ['milk'],
     minServings: 1,
     price: 10,
   },
@@ -31,7 +31,7 @@ export const starterDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697290944/ingrid-chef-webpage/pexels-pixabay-262967_dsqvet.jpg',
     description:
       'Button mushrooms stuffed with a savory mixture of cream cheese, garlic, herbs, and breadcrumbs, then baked to perfection.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 2,
     price: 9,
   },
@@ -42,7 +42,7 @@ export const starterDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697290982/ingrid-chef-webpage/pexels-dmitriy-ganin-7538076_sd6umq.jpg',
     description:
       'Succulent shrimp sautéed in garlic and butter, served with a side of dipping sauce.',
-    allergens: ['Milk', 'Molluscs'],
+    allergens: ['milk', 'molluscs'],
     minServings: 2,
     price: 12,
   },
@@ -111,7 +111,7 @@ export const mainDishes: IMenuItem[] = [
     type: 'mainDish',
     description:
       'Succulent lobster meat baked with a creamy mixture of cheese, herbs, and wine, creating a delightful main course.',
-    allergens: ['Milk', 'Molluscs'],
+    allergens: ['milk', 'molluscs'],
     minServings: 1,
     price: 35,
   },
@@ -133,7 +133,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291181/ingrid-chef-webpage/pexels-krisztina-papp-2374946_ybgxlt.jpg',
     description:
       'Grilled salmon fillet topped with a zesty lemon dill sauce, served with a side of roasted vegetables.',
-    allergens: ['Fish'],
+    allergens: ['fish'],
     minServings: 1,
     price: 25,
   },
@@ -144,7 +144,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -155,7 +155,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -166,7 +166,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -177,7 +177,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -188,7 +188,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -199,7 +199,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -210,7 +210,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -221,7 +221,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -232,7 +232,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -243,7 +243,7 @@ export const mainDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291330/ingrid-chef-webpage/pexels-yanuar-putut-widjanarko-2232433_qnvr0g.jpg',
     description:
       'Breaded and fried chicken cutlet topped with marinara sauce and melted mozzarella cheese, served with spaghetti.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 22,
   },
@@ -257,7 +257,7 @@ export const dessertDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291389/ingrid-chef-webpage/pexels-anna-guerrero-4078174_asniyh.jpg',
     description:
       'A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese, dusted with cocoa powder.',
-    allergens: ['Milk', 'Eggs'],
+    allergens: ['milk', 'eggs'],
     minServings: 1,
     price: 8,
   },
@@ -268,7 +268,7 @@ export const dessertDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291431/ingrid-chef-webpage/pexels-alleksana-4051674_cw5cf4.jpg',
     description:
       'A rich and creamy New York-style cheesecake with a graham cracker crust, topped with fruit compote.',
-    allergens: ['Milk'],
+    allergens: ['milk'],
     minServings: 1,
     price: 10,
   },
@@ -279,7 +279,7 @@ export const dessertDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291466/ingrid-chef-webpage/pexels-anna-tukhfatullina-food-photographerstylist-2693447_oaakb9.jpg',
     description:
       'A buttery pastry crust filled with pastry cream and topped with a colorful assortment of fresh fruits.',
-    allergens: ['Milk', 'Gluten'],
+    allergens: ['milk', 'gluten'],
     minServings: 1,
     price: 14,
   },
@@ -290,7 +290,7 @@ export const dessertDishes: IMenuItem[] = [
       'https://res.cloudinary.com/dfupfbnez/image/upload/v1697291506/ingrid-chef-webpage/pexels-anna-tukhfatullina-food-photographerstylist-2693447_g7dyke.jpg',
     description:
       'Creamy custard with a caramelized sugar crust on top, served in a ramekin.',
-    allergens: ['Milk'],
+    allergens: ['milk'],
     minServings: 1,
     price: 11,
   },

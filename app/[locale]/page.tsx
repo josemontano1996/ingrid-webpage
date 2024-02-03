@@ -25,6 +25,7 @@ export default function Home({ params }: { params: { locale: string } }) {
 
               <div className="text-center lg:space-x-8">
                 <LocaleLink
+                  nextLink={true}
                   path="/menu"
                   styling={cn(
                     buttonVariants({ size: 'lg' }),

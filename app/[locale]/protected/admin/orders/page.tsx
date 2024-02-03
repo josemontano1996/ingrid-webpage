@@ -1,8 +1,7 @@
-import { apiTrial } from '@/database/caching/dbProducts';
+import { apiTrial } from '@/database/dbProducts';
 import React from 'react';
 
 const OrdersPage = () => {
-
   return <div></div>;
 };
 

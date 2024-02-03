@@ -1,13 +1,11 @@
-import { getAllProducts } from '@/database/caching/dbProducts';
+import { getAllProducts } from '@/database/dbProducts';
 import XDraggableList from '../XDraggableList';
 import MenuItem from './MenuItem';
 import { IMenuItem } from '@/interfaces/IMenuItem';
 import { redirect } from 'next/navigation';
 
 const Menu = async ({ locale }: { locale: string }) => {
-  let products: IMenuItem[] = await getAllProducts({
-    cache: true,
-  });
+  let products: IMenuItem[] = await getAllProducts();
 
   if (products.length === 0) {
     redirect(`/${locale}/error`);

@@ -30,7 +30,7 @@ export const ExperiencesSectionSmall: FC = () => {
         </p>
 
         <div>
-          <LocaleLink path="/menu" styling={cn(buttonVariants(), 'sm:text-lg')}>
+          <LocaleLink nextLink={true} path="/menu" styling={cn(buttonVariants(), 'sm:text-lg')}>
             Check the Menu
           </LocaleLink>
         </div>
@@ -55,6 +55,7 @@ export const ExperiencesSectionSmall: FC = () => {
 
         <div>
           <LocaleLink
+            nextLink={true}
             path="/services"
             styling={cn(buttonVariants(), 'sm:text-lg')}
           >
@@ -82,6 +83,7 @@ export const ExperiencesSectionSmall: FC = () => {
 
         <div>
           <LocaleLink
+            nextLink={true}
             path="/services"
             styling={cn(buttonVariants(), 'sm:text-lg')}
           >

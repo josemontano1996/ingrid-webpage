@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import LocaleLink from '../LocaleLink';
 import { SmoothScrollLink } from '../SmoothScrollElement';
 
 const HomeMidNav = ({ locale }: { locale: string }) => {
@@ -13,7 +13,9 @@ const HomeMidNav = ({ locale }: { locale: string }) => {
         </SmoothScrollLink>
       </li>
       <li className="font-medium italic hover:underline">
-        <Link href={`${locale}/menu`}>The Menu</Link>
+        <LocaleLink nextLink={true} path={`/menu`}>
+          The Menu
+        </LocaleLink>
       </li>
     </ul>
   );

@@ -1,16 +1,8 @@
 import { IMenuItem } from '@/interfaces/IMenuItem';
 import Product from '@/models/Product';
-import { dbConnect, dbDisconnect } from '../db';
-import { unstable_noStore } from 'next/cache';
+import { dbConnect, dbDisconnect } from './db';
 
-export const getAllProducts = async ({
-  cache,
-}: {
-  cache: boolean;
-}): Promise<IMenuItem[] | []> => {
-  if (!cache) {
-    unstable_noStore();
-  }
+export const getAllProducts = async (): Promise<IMenuItem[] | []> => {
   let products = [];
   try {
     await dbConnect();
@@ -21,9 +13,7 @@ export const getAllProducts = async ({
     console.log(error);
     return products;
   } finally {
-    if (!cache) {
-      await dbDisconnect();
-    }
+    await dbDisconnect();
   }
 };
 

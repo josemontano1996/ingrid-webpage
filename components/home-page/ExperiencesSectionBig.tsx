@@ -22,6 +22,7 @@ export const ExperiencesSectionBig: FC = () => {
 
           <div className="text-center">
             <LocaleLink
+              nextLink={true}
               path="/menu"
               styling={cn(buttonVariants(), 'text-lg lg:text-xl')}
             >
@@ -59,6 +60,7 @@ export const ExperiencesSectionBig: FC = () => {
 
           <div className="text-center">
             <LocaleLink
+              nextLink={true}
               path="/services"
               styling={cn(buttonVariants(), 'text-lg lg:text-xl')}
             >
@@ -81,6 +83,7 @@ export const ExperiencesSectionBig: FC = () => {
 
           <div className="text-center">
             <LocaleLink
+              nextLink={true}
               path="/services"
               styling={cn(buttonVariants(), 'text-lg lg:text-xl')}
             >

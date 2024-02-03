@@ -6,20 +6,20 @@ import { useParams } from 'next/navigation';
 interface Props {
   children: ReactNode;
   path: string;
+  nextLink: boolean;
   styling?: string;
-  prefetching?: boolean;
 }
 
 const LocaleLink = ({
   children,
   path,
+  nextLink,
   styling = '',
-  prefetching = true,
 }: Props) => {
   const { locale } = useParams();
   return (
     <>
-      {prefetching ? (
+      {nextLink ? (
         <Link href={`/${locale}${path}`} className={styling}>
           {children}
         </Link>

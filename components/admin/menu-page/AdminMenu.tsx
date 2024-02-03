@@ -1,4 +1,4 @@
-import { getAllProducts } from '@/database/caching/dbProducts';
+import { getAllProducts } from '@/database/dbProducts';
 
 import MenuItem from './AdminMenuItem';
 import { IMenuItem } from '@/interfaces/IMenuItem';
@@ -6,9 +6,7 @@ import { IMenuItem } from '@/interfaces/IMenuItem';
 import XDraggableList from '@/components/XDraggableList';
 
 const AdminProducts = async () => {
-  let products: IMenuItem[] = await getAllProducts({
-    cache: true,
-  });
+  let products: IMenuItem[] = await getAllProducts();
 
   const starterDishes = products.filter(
     (product) => product.type === 'starter',

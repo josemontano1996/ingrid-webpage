@@ -1,13 +1,11 @@
 import User from '@/models/User';
-import { dbConnect, dbDisconnect } from '../db';
-import { unstable_noStore } from 'next/cache';
+import { dbConnect, dbDisconnect } from './db';
 
 export const checkOAuthUser = async (
   oAuthEmail: string,
   oAuthName: string,
   oAuthImage: string,
 ) => {
-  unstable_noStore();
   await dbConnect();
   const user = await User.findOne({ email: oAuthEmail });
 
